@@ -202,9 +202,5 @@ It is designed to execute from a command line with usage syntax `./querier pageD
 	8. Exits with zero status when EOF is reached on stdin.
 
 
-## Assumptions
-
-The querier assumes that the input directory and files follow the designated formats:
-
 
 
