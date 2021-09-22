@@ -1,0 +1,8 @@
+indexer
+indextest
+*.o
+t4test
+t4
+t6
+testout
+copytestout

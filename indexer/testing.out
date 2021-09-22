@@ -1,0 +1,19 @@
+bash -x testing.sh
++ ./indexer
+ invalid number of arguments! 
++ ./indexer invaliddirectory testout
+ invaliddirectory invalid crawler directory! are you sure you want to be looking here? 
++ ./indexer ../crawler/t4 testout
+../crawler/t4/1
+../crawler/t4/2
+../crawler/t4/3
+../crawler/t4/4
+../crawler/t4/5
+../crawler/t4/6
+../crawler/t4/7
+../crawler/t4/8
+../crawler/t4/9
+../crawler/t4/10
++ ./indextest testout copytestout
++ echo diff copytestout t4test
+diff copytestout t4test

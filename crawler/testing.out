@@ -1,0 +1,358 @@
+f0041r0@plank:~/cs50/labs/tse-mccallw23/crawler$ make test
+bash -x ./testing.sh
++ rm -rf t1 t2 t3 t4 t5 t6
++ mkdir t1 t2 t3 t4 t5 t6
++ ./crawler
+invalid args.  Either incorrect order (./crawler URL directory depth), wrong number of args, or depth out of range [0,10]
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/
+invalid args.  Either incorrect order (./crawler URL directory depth), wrong number of args, or depth out of range [0,10]
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/ t1
+invalid args.  Either incorrect order (./crawler URL directory depth), wrong number of args, or depth out of range [0,10]
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/ t1 -10
+invalid args.  Either incorrect order (./crawler URL directory depth), wrong number of args, or depth out of range [0,10]
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/ t1 0
+directory exists and is readable!
+success! URL is internal!
+crawling URL http://cs50tse.cs.dartmouth.edu/tse/letters/ to depth 0 and storing results in t1
+creating file t1/1...
+Depth: 0: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/ 
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/ t2 1
+directory exists and is readable!
+success! URL is internal!
+crawling URL http://cs50tse.cs.dartmouth.edu/tse/letters/ to depth 1 and storing results in t2
+creating file t2/1...
+Depth: 0: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/ 
+Depth: 0: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/ 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+creating file t2/2...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/ t3 2
+directory exists and is readable!
+success! URL is internal!
+crawling URL http://cs50tse.cs.dartmouth.edu/tse/letters/ to depth 2 and storing results in t3
+creating file t3/1...
+Depth: 0: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/ 
+Depth: 0: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/ 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+creating file t3/2...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Depth: 1: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Depth: 1: not internal @URL https://en.wikipedia.org/wiki/Algorithm 
+Depth: 1: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
+Depth: 1: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t3/3...
+Depth: 2: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t3/4...
+Depth: 2: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/ t4 6
+directory exists and is readable!
+success! URL is internal!
+crawling URL http://cs50tse.cs.dartmouth.edu/tse/letters/ to depth 6 and storing results in t4
+creating file t4/1...
+Depth: 0: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/ 
+Depth: 0: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/ 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+creating file t4/2...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Depth: 1: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Depth: 1: not internal @URL https://en.wikipedia.org/wiki/Algorithm 
+Depth: 1: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
+Depth: 1: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t4/3...
+Depth: 2: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Depth: 2: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+Depth: 2: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+creating file t4/4...
+Depth: 2: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
+Depth: 2: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
+Depth: 2: not internal @URL https://en.wikipedia.org/wiki/Breadth-first_search 
+Depth: 2: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/C.html 
+Depth: 2: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/D.html 
+Depth: 2: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/E.html 
+Depth: 2: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t4/5...
+Depth: 3: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/E.html 
+Depth: 3: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/E.html 
+Depth: 3: not internal @URL https://en.wikipedia.org/wiki/ENIAC 
+Depth: 3: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/F.html 
+Depth: 3: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/G.html 
+Depth: 3: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/A.html 
+Depth: 3: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t4/6...
+Depth: 4: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/G.html 
+Depth: 4: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/G.html 
+Depth: 4: not internal @URL https://en.wikipedia.org/wiki/Graph_traversal 
+Depth: 4: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/letters/H.html 
+Depth: 4: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t4/7...
+Depth: 5: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/H.html 
+Depth: 5: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/H.html 
+Depth: 5: not internal @URL https://en.wikipedia.org/wiki/Huffman_coding 
+Depth: 5: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/B.html 
+Depth: 5: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t4/8...
+Depth: 4: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/F.html 
+Depth: 4: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/F.html 
+Depth: 4: not internal @URL https://en.wikipedia.org/wiki/Fast_Fourier_transform 
+Depth: 4: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/H.html 
+Depth: 4: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t4/9...
+Depth: 3: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/D.html 
+Depth: 3: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/D.html 
+Depth: 3: not internal @URL https://en.wikipedia.org/wiki/Depth-first_search 
+Depth: 3: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
+creating file t4/10...
+Depth: 3: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/letters/C.html 
+Depth: 3: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/letters/C.html 
+Depth: 3: not internal @URL https://en.wikipedia.org/wiki/Computational_biology 
+Depth: 3: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/D.html 
+Depth: 3: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/letters/index.html 
++ ./crawler http://cs50tse.cs.dartmouth.edu/tse/toscrape/ t5 1
+directory exists and is readable!
+success! URL is internal!
+crawling URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/ to depth 1 and storing results in t5
+creating file t5/1...
+Depth: 0: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/ 
+Depth: 0: scanning... @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/ 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books_1/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/travel_2/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/mystery_3/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/historical-fiction_4/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/sequential-art_5/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/classics_6/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/philosophy_7/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/romance_8/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/womens-fiction_9/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/fiction_10/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/childrens_11/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/religion_12/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/nonfiction_13/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/music_14/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/default_15/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/science-fiction_16/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/sports-and-games_17/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/add-a-comment_18/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/fantasy_19/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/new-adult_20/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/young-adult_21/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/science_22/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/poetry_23/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/paranormal_24/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/art_25/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/psychology_26/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/autobiography_27/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/parenting_28/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/adult-fiction_29/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/humor_30/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/horror_31/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/history_32/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/food-and-drink_33/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/christian-fiction_34/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/business_35/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/biography_36/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/thriller_37/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/contemporary_38/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/spirituality_39/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/academic_40/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/self-help_41/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/historical_42/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/christian_43/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/suspense_44/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/short-stories_45/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/novels_46/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/health_47/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/politics_48/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/cultural_49/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/erotica_50/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/crime_51/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/a-light-in-the-attic_1000/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/a-light-in-the-attic_1000/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/tipping-the-velvet_999/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/tipping-the-velvet_999/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/soumission_998/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/soumission_998/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/sharp-objects_997/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/sharp-objects_997/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/sapiens-a-brief-history-of-humankind_996/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/sapiens-a-brief-history-of-humankind_996/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-requiem-red_995/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-requiem-red_995/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-black-maria_991/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-black-maria_991/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/shakespeares-sonnets_989/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/shakespeares-sonnets_989/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/set-me-free_988/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/set-me-free_988/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/rip-it-up-and-start-again_986/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/rip-it-up-and-start-again_986/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/olio_984/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/olio_984/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/libertarianism-for-beginners_982/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/libertarianism-for-beginners_982/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/its-only-the-himalayas_981/index.html 
+Depth: 0: duplicate page @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/its-only-the-himalayas_981/index.html 
+Depth: 0: seeing/inserting to queue @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/page-2.html 
+creating file t5/2...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/page-2.html 
+creating file t5/3...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/its-only-the-himalayas_981/index.html 
+creating file t5/4...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/libertarianism-for-beginners_982/index.html 
+creating file t5/5...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html 
+creating file t5/6...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/olio_984/index.html 
+creating file t5/7...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html 
+creating file t5/8...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/rip-it-up-and-start-again_986/index.html 
+creating file t5/9...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html 
+creating file t5/10...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/set-me-free_988/index.html 
+creating file t5/11...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/shakespeares-sonnets_989/index.html 
+creating file t5/12...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html 
+creating file t5/13...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-black-maria_991/index.html 
+creating file t5/14...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html 
+creating file t5/15...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html 
+creating file t5/16...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html 
+creating file t5/17...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-requiem-red_995/index.html 
+creating file t5/18...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/sapiens-a-brief-history-of-humankind_996/index.html 
+creating file t5/19...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/sharp-objects_997/index.html 
+creating file t5/20...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/soumission_998/index.html 
+creating file t5/21...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/tipping-the-velvet_999/index.html 
+creating file t5/22...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/a-light-in-the-attic_1000/index.html 
+creating file t5/23...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/crime_51/index.html 
+creating file t5/24...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/erotica_50/index.html 
+creating file t5/25...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/cultural_49/index.html 
+creating file t5/26...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/politics_48/index.html 
+creating file t5/27...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/health_47/index.html 
+creating file t5/28...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/novels_46/index.html 
+creating file t5/29...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/short-stories_45/index.html 
+creating file t5/30...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/suspense_44/index.html 
+creating file t5/31...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/christian_43/index.html 
+creating file t5/32...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/historical_42/index.html 
+creating file t5/33...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/self-help_41/index.html 
+creating file t5/34...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/academic_40/index.html 
+creating file t5/35...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/spirituality_39/index.html 
+creating file t5/36...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/contemporary_38/index.html 
+creating file t5/37...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/thriller_37/index.html 
+creating file t5/38...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/biography_36/index.html 
+creating file t5/39...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/business_35/index.html 
+creating file t5/40...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/christian-fiction_34/index.html 
+creating file t5/41...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/food-and-drink_33/index.html 
+creating file t5/42...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/history_32/index.html 
+creating file t5/43...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/horror_31/index.html 
+creating file t5/44...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/humor_30/index.html 
+creating file t5/45...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/adult-fiction_29/index.html 
+creating file t5/46...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/parenting_28/index.html 
+creating file t5/47...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/autobiography_27/index.html 
+creating file t5/48...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/psychology_26/index.html 
+creating file t5/49...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/art_25/index.html 
+creating file t5/50...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/paranormal_24/index.html 
+creating file t5/51...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/poetry_23/index.html 
+creating file t5/52...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/science_22/index.html 
+creating file t5/53...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/young-adult_21/index.html 
+creating file t5/54...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/new-adult_20/index.html 
+creating file t5/55...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/fantasy_19/index.html 
+creating file t5/56...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/add-a-comment_18/index.html 
+creating file t5/57...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/sports-and-games_17/index.html 
+creating file t5/58...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/science-fiction_16/index.html 
+creating file t5/59...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/default_15/index.html 
+creating file t5/60...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/music_14/index.html 
+creating file t5/61...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/nonfiction_13/index.html 
+creating file t5/62...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/religion_12/index.html 
+creating file t5/63...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/childrens_11/index.html 
+creating file t5/64...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/fiction_10/index.html 
+creating file t5/65...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/womens-fiction_9/index.html 
+creating file t5/66...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/romance_8/index.html 
+creating file t5/67...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/philosophy_7/index.html 
+creating file t5/68...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/classics_6/index.html 
+creating file t5/69...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/sequential-art_5/index.html 
+creating file t5/70...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/historical-fiction_4/index.html 
+creating file t5/71...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/mystery_3/index.html 
+creating file t5/72...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/travel_2/index.html 
+creating file t5/73...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books_1/index.html 
+creating file t5/74...
+Depth: 1: Webpage Fetched @URL http://cs50tse.cs.dartmouth.edu/tse/toscrape/index.html 
+
+f0041r0@plank:~/cs50/labs/tse-mccallw23/crawler$ 
